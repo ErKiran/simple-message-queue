@@ -22,4 +22,4 @@ If there's any error on the console. Then open
 
 You can view Hacker Text render on screen. 
 
-![image]('docs/screen.png')
+![image](docs/screen.png)
