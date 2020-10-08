@@ -30,10 +30,28 @@ And quickly if we switch to channels tab we can see we are using only mininum nu
 ![image](docs/channels.png)
 
 
+During the Gentel Transfer and Receive Process 
+
+![image](docs/transfers.png)
+
+![image](docs/transfers2.png)
+
+
+#### If I open multiple connection from the frontend then the multiple channels will be created and that distributes the message rate. 
+
+For example when I open 8 Tabs in browser Message rate was (2.6*4+2.4*4 =20)/s 
+
+![image](docs/distributed.png)
+
+#### Architecture
+* Publisher publishes 20 random message per second to the Queue
+* Consumer consumes all the published message from the queue and only pass those message which has priority greater than 7 (Random)
+* Simple Vanilla JS frontend open's up socket connection on browser and listen on the particular events. When the events occurs it displayed the pushed data to DOM. 
+Like this 
+
 Then open 
 `http://localhost:3000/` on browser.
 
 You can view Hacker Text render on screen. 
 
 ![image](docs/screen.png)
-

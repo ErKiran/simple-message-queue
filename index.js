@@ -24,8 +24,8 @@ server.listen(PORT, () => {
   });
 });
 
-io.on("connection", (socket) => {
-  sendEvent(socket);
+io.on("connection", async(socket) => {
+  await sendEvent(socket);
 });
 
 module.exports = {
