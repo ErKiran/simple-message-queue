@@ -17,8 +17,8 @@ async function Publish() {
       durable: false,
     });
     channel.sendToQueue(queue, Buffer.from(JSON.stringify(msg)));
-    50;
-  });
+    
+  },50);
 }
 
 Publish()
